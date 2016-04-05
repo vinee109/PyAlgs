@@ -3,13 +3,12 @@ TODO: description of list.py
 """
 __author__ = "Vineet Jain"
 
-from error.exceptions import RemoveFromEmpty
 
 class ListNode:
     """
     Implementation of a generic node in a linked list
     """
-    def __init__(self, x, prev=None, nxt=None):
+    def __init__(self, x, prev=None, next=None):
         """
         ListNode Constructor
         :param x: the value contained by this node
@@ -22,7 +21,7 @@ class ListNode:
         self.next = next
 
     def __str__(self):
-        return "{}".format(x)
+        return "{}".format(self.val)
 
     def __repr__(self):
         return str(self)
