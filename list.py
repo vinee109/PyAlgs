@@ -37,7 +37,7 @@ class LinkedList:
 
 
 
-class SLinkedlist(LinkedList):
+class SLinkedList(LinkedList):
     """
     Implementation of a Singly Linked List
     """
