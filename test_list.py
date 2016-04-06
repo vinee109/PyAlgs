@@ -20,7 +20,7 @@ class TestStringMethods(unittest.TestCase):
         slist.insertEnd(1)
         slist.insertEnd(2)
         slist.insertEnd(3)
-        expected = "[1, 2, 3]"
+        expected = "[ 1 2 3 ]"
         actual = str(slist)
         self.assertEqual(expected, actual, expected_str(expected, actual))
 
