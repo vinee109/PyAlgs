@@ -73,6 +73,7 @@ class SLinkedList(LinkedList):
         strs = []
         while node:
             strs.append(str(node))
+            node = node.next
         return " ".join(["["] + strs + ["]"])
 
 
