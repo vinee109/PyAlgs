@@ -59,13 +59,13 @@ class SLinkedList(LinkedList):
         Inserts an item to the end of the linked list
         :param x: the item we want to insert
         """
-        if not self.dummy.next:
+        if self.isEmpty():
             self.dummy.next = ListNode(x)
             self.head = self.dummy.next
             self.tailprev = self.dummy
         else:
-            self.tailprev.next = ListNode(x)
             self.tailprev = self.tailprev.next
+            self.tailprev.next = ListNode(x)
         self.size += 1
 
     def __str__(self):
