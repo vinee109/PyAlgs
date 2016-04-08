@@ -75,15 +75,17 @@ class SLinkedList(LinkedList):
             return None
         else:
             if self.size == 1:
-                to_return = self.head.item
-                self.head, self.tail = None
+                to_return = self.head.val
+                self.head, self.tail = None, None
+                self.size -= 1
                 return to_return
             else:
                 node = self.head
                 while node.next.next != None:
                     node = node.next
-                to_return = node.next.item
+                to_return = node.next.val
                 node.next = None
+                self.size -= 1
                 return to_return
 
 
