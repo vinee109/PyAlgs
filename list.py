@@ -68,6 +68,27 @@ class SLinkedList(LinkedList):
             self.tailprev.next = ListNode(x)
         self.size += 1
 
+    def removeEnd(self):
+        """
+        Removes the item at the end of the linked list
+        :return: The item that was removed, None if the list is empty
+        """
+        if self.isEmpty():
+            return None
+        else:
+            if self.size == 1:
+                to_return = self.head.item
+                self.head, self.tail = None
+                return to_return
+            else:
+                node = self.head
+                while node.next.next != None:
+                    node = node.next
+                to_return = node.next.item
+                node.next = None
+                return to_return
+
+
     def __str__(self):
         node = self.head
         strs = []
