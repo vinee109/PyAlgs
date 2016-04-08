@@ -1,8 +1,8 @@
 __author__ = "Vineet Jain"
 
 import unittest
-from list import ListNode
-from list import SLinkedList
+from linkedlist import ListNode
+from linkedlist import SLinkedList
 from test_utils import expected_str
 
 class TestStringMethods(unittest.TestCase):
