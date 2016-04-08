@@ -42,9 +42,8 @@ class SLinkedList(LinkedList):
     Implementation of a Singly Linked List
     """
     def __init__(self):
-        self.dummy = ListNode(None)
         self.head = None
-        self.tailprev = None
+        self.tail = None
         self.size = 0
 
     def isEmpty(self):
@@ -60,12 +59,11 @@ class SLinkedList(LinkedList):
         :param x: the item we want to insert
         """
         if self.isEmpty():
-            self.dummy.next = ListNode(x)
-            self.head = self.dummy.next
-            self.tailprev = self.dummy
+            self.head = ListNode(x)
+            self.tail = self.head
         else:
-            self.tailprev = self.tailprev.next
-            self.tailprev.next = ListNode(x)
+            self.tail.next = ListNode(x)
+            self.tail = self.tail.next
         self.size += 1
 
     def removeEnd(self):
