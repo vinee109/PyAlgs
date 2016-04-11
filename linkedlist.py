@@ -1,5 +1,11 @@
 """
-TODO: description of list.py
+Implementation of standard linked list datastructures.
+
+Includes:
+- Singly Linked List
+- Double Linked List
+- Queues
+- Double Ended Queues
 """
 __author__ = "Vineet Jain"
 
