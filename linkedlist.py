@@ -41,6 +41,17 @@ class LinkedList:
     def isEmpty(self):
         raise NotImplementedError()
 
+    def insertEnd(self, x):
+        raise NotImplementedError()
+
+    def removeEnd(self):
+        raise NotImplementedError()
+
+    def insertFront(self, x):
+        raise NotImplementedError()
+
+    def removeFront(self, x):
+        raise NotImplementedError()
 
 
 class SLinkedList(LinkedList):
