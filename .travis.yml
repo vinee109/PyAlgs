@@ -1,4 +1,5 @@
 language: python
 python:
     - "2.7"
-script: python -m unitttest discover
+install: "pip install -r requirements.txt"
+script: "python -m unitttest discover"
