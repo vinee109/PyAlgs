@@ -117,3 +117,11 @@ class SLinkedList(LinkedList):
 
     def __repr__(self):
         return str(self)
+
+
+class DLinkedList(LinkedList):
+
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.sentinel = ListNode(None)
