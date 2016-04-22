@@ -38,8 +38,15 @@ class LinkedList:
     Interface of LinkedList
     """
 
+    def __init__(self):
+        self.size = 0
+
     def isEmpty(self):
-        raise NotImplementedError()
+        """
+        Returns whether this linked list is empty or not
+        :return: True if this Linked List is empty, False otherwise
+        """
+        return self.size == 0
 
     def insertEnd(self, x):
         raise NotImplementedError()
@@ -59,9 +66,9 @@ class SLinkedList(LinkedList):
     Implementation of a Singly Linked List
     """
     def __init__(self):
+        LinkedList.__init__(self)
         self.head = None
         self.tail = None
-        self.size = 0
 
     def isEmpty(self):
         """
@@ -122,6 +129,7 @@ class SLinkedList(LinkedList):
 class DLinkedList(LinkedList):
 
     def __init__(self):
+        LinkedList.__init__(self)
         self.head = None
         self.tail = None
         self.sentinel = ListNode(None)
