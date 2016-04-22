@@ -60,6 +60,9 @@ class LinkedList:
     def removeFront(self, x):
         raise NotImplementedError()
 
+    def __repr__(self):
+        return str(self)
+
 
 class SLinkedList(LinkedList):
     """
@@ -120,10 +123,6 @@ class SLinkedList(LinkedList):
             strs.append(str(node))
             node = node.next
         return " ".join(["["] + strs + ["]"])
-
-
-    def __repr__(self):
-        return str(self)
 
 
 class DLinkedList(LinkedList):
