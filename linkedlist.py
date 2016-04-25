@@ -122,6 +122,35 @@ class DLinkedList(LinkedList):
 
     def __init__(self):
         LinkedList.__init__(self)
-        self.head = None
-        self.tail = None
         self.sentinel = ListNode(None)
+        self.sentinel.next = self.sentinel
+        self.sentinel.prev = self.sentinel
+
+    def insertEnd(self, x):
+        """
+        Inserts an item to the end of the linked list
+        :param x: the item we want to insert
+        """
+        node = ListNode(x, self.sentinel.prev, self.sentinel)
+        self.sentinel.prev.next = node
+        self.sentinel.prev = node
+        self.size += 1
+
+    def removeEnd(self):
+        """
+        Removes the item at the end of the linked list
+        :return: The item that was removed, None if the list is empty
+        """
+        node = self.sentinel.prev
+        self.sentinel.prev.prev.next = self.sentinel
+        self.sentinel.prev = self.sentinel.prev.prev
+        self.size -= 1
+        return node.val
+
+    def __str__(self):
+        node = self.sentinel.next
+        strs = []
+        while node != self.sentinel:
+            strs.append(str(node))
+            node = node.next
+        return " ".join(["["] + strs + ["]"])
