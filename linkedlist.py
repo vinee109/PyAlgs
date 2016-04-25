@@ -73,13 +73,6 @@ class SLinkedList(LinkedList):
         self.head = None
         self.tail = None
 
-    def isEmpty(self):
-        """
-        Returns whether this linked list is empty or not
-        :return: True if this Linked List is empty, False otherwise
-        """
-        return self.size == 0
-
     def insertEnd(self, x):
         """
         Inserts an item to the end of the linked list
