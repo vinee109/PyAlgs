@@ -1,10 +1,11 @@
-__author__ = "Vineet Jain"
-
 import unittest
 from linkedlist import ListNode
 from linkedlist import SLinkedList
 from linkedlist import DLinkedList
 from test_utils import expected_str
+
+__author__ = "Vineet Jain"
+
 
 class TestStringMethods(unittest.TestCase):
     """
@@ -91,6 +92,7 @@ class TestSLinkedList(TestLinkedList):
 
     def testRemovEnd(self):
         self.runTestRemoveEnd(self.lst)
+
 
 class TestDLinkedList(TestLinkedList):
 

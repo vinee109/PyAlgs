@@ -101,13 +101,12 @@ class SLinkedList(LinkedList):
                 return to_return
             else:
                 node = self.head
-                while node.next.next != None:
+                while node.next.next is not None:
                     node = node.next
                 to_return = node.next.val
                 node.next = None
                 self.size -= 1
                 return to_return
-
 
     def __str__(self):
         node = self.head
