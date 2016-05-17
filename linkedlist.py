@@ -14,6 +14,7 @@ class ListNode:
     """
     Implementation of a generic node in a linked list
     """
+
     def __init__(self, x, prev=None, next=None):
         """
         ListNode Constructor
@@ -68,6 +69,7 @@ class SLinkedList(LinkedList):
     """
     Implementation of a Singly Linked List
     """
+
     def __init__(self):
         LinkedList.__init__(self)
         self.head = None
@@ -118,6 +120,9 @@ class SLinkedList(LinkedList):
 
 
 class DLinkedList(LinkedList):
+    """
+    Implementation of a Doubly Linked List
+    """
 
     def __init__(self):
         LinkedList.__init__(self)
